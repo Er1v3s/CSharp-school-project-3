@@ -1,0 +1,15 @@
+E:\VisualStudio\program3\Artisan\bin\Debug\net6.0\Artisan.exe
+E:\VisualStudio\program3\Artisan\bin\Debug\net6.0\Artisan.deps.json
+E:\VisualStudio\program3\Artisan\bin\Debug\net6.0\Artisan.runtimeconfig.json
+E:\VisualStudio\program3\Artisan\bin\Debug\net6.0\Artisan.dll
+E:\VisualStudio\program3\Artisan\bin\Debug\net6.0\Artisan.pdb
+E:\VisualStudio\program3\Artisan\obj\Debug\net6.0\Artisan.csproj.AssemblyReference.cache
+E:\VisualStudio\program3\Artisan\obj\Debug\net6.0\Artisan.GeneratedMSBuildEditorConfig.editorconfig
+E:\VisualStudio\program3\Artisan\obj\Debug\net6.0\Artisan.AssemblyInfoInputs.cache
+E:\VisualStudio\program3\Artisan\obj\Debug\net6.0\Artisan.AssemblyInfo.cs
+E:\VisualStudio\program3\Artisan\obj\Debug\net6.0\Artisan.csproj.CoreCompileInputs.cache
+E:\VisualStudio\program3\Artisan\obj\Debug\net6.0\Artisan.dll
+E:\VisualStudio\program3\Artisan\obj\Debug\net6.0\refint\Artisan.dll
+E:\VisualStudio\program3\Artisan\obj\Debug\net6.0\Artisan.pdb
+E:\VisualStudio\program3\Artisan\obj\Debug\net6.0\Artisan.genruntimeconfig.cache
+E:\VisualStudio\program3\Artisan\obj\Debug\net6.0\ref\Artisan.dll
