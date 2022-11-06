@@ -19,7 +19,16 @@ namespace Artisan
                 if (item != null)
                     if (item == "bed")
                     {
-                        Bed createdItem = new Bed();
+                        int width, footerheight, matterss;
+                        Console.Write("bed width: ");
+                        width = Convert.ToInt32(Console.ReadLine());
+                        Console.Write("footers height: ");
+                        footerheight = Convert.ToInt32(Console.ReadLine());
+                        Console.Write("matters count: ");
+                        matterss = Convert.ToInt32(Console.ReadLine());
+
+                        Bed createdItem = new Bed(width, footerheight, matterss);
+                        createdItem.drawBed();
                     }
                     else if (item == "bookshelf")
                     {
@@ -27,19 +36,15 @@ namespace Artisan
                     }
                     else if (item == "chair")
                     {
-                        Chair createdElement = new Chair();
+                        Chair createdItem = new Chair();
                     }
                     else
                     {
-                        Console.WriteLine("I'm sorry but I can't make sculpt this for you");
+                        Console.WriteLine("I'm sorry but I can't sculpt this for you");
                         boolflag = false;
                     }
             }
             while (boolflag == false);
-
-            Console.WriteLine("Out of loop");
-
-
 
 
             Console.ReadLine();
