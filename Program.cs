@@ -34,7 +34,7 @@ namespace Artisan
                     }
                     else if (item == "chair")
                     {
-                        Console.WriteLine("If you don't provide properties, the sculpture will be created with default properties");
+                        Console.WriteLine("If you enter 0 it will be replaced to the default value");
                         getParametrs("chair", "footers", "back");
                         Chair createdItem = new Chair(width, footerheight, uniqueThing);
                         createdItem.drawChair();
