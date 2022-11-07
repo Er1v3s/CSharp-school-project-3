@@ -1,13 +1,15 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 namespace Artisan
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
             string item;
             bool boolflag;
+            int width, footerheight, uniqueThing;
 
             do
             {
@@ -17,35 +19,44 @@ namespace Artisan
                 item = item.ToLower();
 
                 if (item != null)
+                {
                     if (item == "bed")
                     {
-                        int width, footerheight, matterss;
-                        Console.Write("bed width: ");
-                        width = Convert.ToInt32(Console.ReadLine());
-                        Console.Write("footers height: ");
-                        footerheight = Convert.ToInt32(Console.ReadLine());
-                        Console.Write("matters count: ");
-                        matterss = Convert.ToInt32(Console.ReadLine());
-
-                        Bed createdItem = new Bed(width, footerheight, matterss);
+                        getParametrs("bed", "footers", "matterss");
+                        Bed createdItem = new Bed(width, footerheight, uniqueThing);
                         createdItem.drawBed();
                     }
                     else if (item == "bookshelf")
                     {
-                        Bookshelf createdItem = new Bookshelf();
+                        getParametrs("bookshelf", "bookshelf", "shelf count");
+                        Bookshelf createdItem = new Bookshelf(width, footerheight, uniqueThing);
+                        createdItem.drawBookshelf();
                     }
                     else if (item == "chair")
                     {
-                        Chair createdItem = new Chair();
+                        Console.WriteLine("If you don't provide properties, the sculpture will be created with default properties");
+                        getParametrs("chair", "footers", "back");
+                        Chair createdItem = new Chair(width, footerheight, uniqueThing);
+                        createdItem.drawChair();
                     }
                     else
                     {
                         Console.WriteLine("I'm sorry but I can't sculpt this for you");
                         boolflag = false;
                     }
+                }
             }
             while (boolflag == false);
 
+            void getParametrs(string thingName, string thingHeight, string thingUnique)
+            { 
+                Console.Write(thingName + " width: ");
+                width = Convert.ToInt32(Console.ReadLine());
+                Console.Write(thingHeight + " height: ");
+                footerheight = Convert.ToInt32(Console.ReadLine());
+                Console.Write(thingUnique + " size: ");
+                uniqueThing = Convert.ToInt32(Console.ReadLine());
+            }
 
             Console.ReadLine();
         }

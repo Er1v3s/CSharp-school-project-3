@@ -8,65 +8,29 @@ using System.Threading.Tasks;
 
 namespace Artisan
 {
-    class Bed
+    internal class Bed : Sculpture
     {
-        private int width;
-        private int footersHeight;
-        private int mattress;
+        internal Bed(int getWidth, int getfootersHeight, int getUniqueThing) : base(getWidth, getfootersHeight, getUniqueThing) { }
 
-        public Bed(int getWidth, int getfootersHeight, int getMattress)
-        {
-            width = getWidth;
-            footersHeight = getfootersHeight;
-            mattress = getMattress;
-        }
-
-        public void drawBed()
+        protected internal void drawBed()
         {
             Console.WriteLine("\n#####");
-            for (int x = 1; x <= mattress; x++)
+            for (int x = 1; x <= uniqueThing; x++)
             {
-                for (int i = 1; i <= width; i++)
-                {
-                    Console.Write("#");
-                }
-                if(x < mattress)
-                {
-                Console.WriteLine(" ");
-                }
+                drawMatters(x);   
             }
-
-            for (int z = 1; z <= footersHeight; z++)
+            drawfooters();
+        }
+        private void drawMatters(int x)
+        {
+            for (int i = 1; i <= width; i++)
             {
-                Console.Write("\n");
                 Console.Write("#");
-                Console.Write(" ");
-                Console.Write(" ");
-                if (z <= (footersHeight / 2))
-                {
-                    Console.Write("#");
-                }
-                else
-                {
-                    Console.Write(" ");
-                }
-                
-                for (int y = 1; y <= (width - 8); y++)
-                {
-                    Console.Write(" ");
-                }
-                Console.Write("#");
-                Console.Write(" ");
-                Console.Write(" ");
-                if (z <= (footersHeight / 2))
-                {
-                    Console.Write("#");
-                }
-                else
-                {
-                    Console.Write(" ");
-                }
+            }
+            if (x < uniqueThing)
+            {
+                Console.WriteLine(" ");
             }
         }
-    }                  
+    }
 }
